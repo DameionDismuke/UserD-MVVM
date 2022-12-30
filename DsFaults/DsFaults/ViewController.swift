@@ -57,9 +57,9 @@ class ViewController: UIViewController {
     
     @IBAction func randomBookTapped(_ sender: Any) {
 
-        let page = BookOfLife(title: "IKaigi", authoName: "ABC", pageCount: 500)
-        let page2 = BookOfLife(title: "Sunrise", authoName: "BBB", pageCount: 100)
-        let page3 = BookOfLife(title: "Surprise", authoName: "NANA", pageCount: 1000)
+        let page = BookOfLife(title: "IKaigi", authoName: "ABC", dayCount: 500)
+        let page2 = BookOfLife(title: "Sunrise", authoName: "BBB", dayCount: 100)
+        let page3 = BookOfLife(title: "Surprise", authoName: "NANA", dayCount: 1000)
 
         let choice = [page, page2, page3]
         let data = choice.randomElement()!

@@ -11,7 +11,7 @@ import Foundation
 struct BookOfLife: Codable {
     var title: String
     var authoName: String
-    var pageCount: Int
+    var dayCount: Int
 }
 
 extension UserDefaults {
