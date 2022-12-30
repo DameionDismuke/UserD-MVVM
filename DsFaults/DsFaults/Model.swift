@@ -8,7 +8,12 @@
 import Foundation
 
 
-struct BookOfLife: Codable {
+struct BookOfLife: Codable, CustomStringConvertible {
+    var description: String
+    {
+        return "\(title) \(authoName) \(dayCount)"
+    }
+    
     var title: String
     var authoName: String
     var dayCount: Int
@@ -39,4 +44,6 @@ extension UserDefaults {
             return nil
         }
     }
+    
+    
 }

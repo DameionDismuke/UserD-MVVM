@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,26 +17,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL3-oF-gsO">
-                                <rect key="frame" x="0.0" y="128" width="393" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YL3-oF-gsO">
+                                <rect key="frame" x="0.0" y="129" width="393" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKZ-2m-HEy">
-                                <rect key="frame" x="148" y="309" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yh6-rR-bJs">
+                                <rect key="frame" x="0.0" y="498" width="393" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Random Double">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomDoubleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpp-8e-LHd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3x3-jA-Kfq">
+                                <rect key="frame" x="0.0" y="553" width="393" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Random Champions">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomStringTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njz-hb-3MV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hw-H8-BCX">
+                                <rect key="frame" x="0.0" y="608" width="393" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Random Array">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomArrayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqh-3g-AaR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-DN-6Vp">
+                                <rect key="frame" x="0.0" y="663" width="393" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Random Books of Life">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="randomBookTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKn-1Y-mcd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eet-VL-7Y7">
+                                <rect key="frame" x="0.0" y="728" width="393" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="RESET">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4iv-FM-vk4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hd-DP-qjk">
+                                <rect key="frame" x="0.0" y="783" width="393" height="35"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DELETE">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YL3-oF-gsO" secondAttribute="trailing" id="0p6-zQ-JnW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yh6-rR-bJs" secondAttribute="trailing" id="5MB-3W-tsm"/>
+                            <constraint firstItem="YL3-oF-gsO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="8Sx-42-2cN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5hd-DP-qjk" secondAttribute="trailing" id="8sW-mU-eIg"/>
+                            <constraint firstItem="yh6-rR-bJs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Anz-Qd-bdU"/>
+                            <constraint firstItem="3x3-jA-Kfq" firstAttribute="top" secondItem="yh6-rR-bJs" secondAttribute="bottom" constant="20" id="CAq-tU-P8H"/>
+                            <constraint firstItem="eet-VL-7Y7" firstAttribute="top" secondItem="gRu-DN-6Vp" secondAttribute="bottom" constant="30" id="PcQ-jh-pud"/>
+                            <constraint firstItem="gRu-DN-6Vp" firstAttribute="top" secondItem="9Hw-H8-BCX" secondAttribute="bottom" constant="20" id="RjZ-yB-XYr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gRu-DN-6Vp" secondAttribute="trailing" id="Ski-9g-y0R"/>
+                            <constraint firstItem="eet-VL-7Y7" firstAttribute="top" secondItem="gRu-DN-6Vp" secondAttribute="bottom" constant="30" id="Thi-eG-aPy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3x3-jA-Kfq" secondAttribute="trailing" id="Urw-xh-VfN"/>
                             <constraint firstItem="YL3-oF-gsO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="egv-vX-aJZ"/>
+                            <constraint firstItem="9Hw-H8-BCX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gAs-tR-TRx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5hd-DP-qjk" secondAttribute="bottom" id="hJo-bk-ULb"/>
+                            <constraint firstItem="gRu-DN-6Vp" firstAttribute="top" secondItem="9Hw-H8-BCX" secondAttribute="bottom" constant="20" id="j7D-M4-Ika"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eet-VL-7Y7" secondAttribute="trailing" id="jIp-kT-xvR"/>
+                            <constraint firstItem="5hd-DP-qjk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kzN-5y-Jik"/>
+                            <constraint firstItem="9Hw-H8-BCX" firstAttribute="top" secondItem="3x3-jA-Kfq" secondAttribute="bottom" constant="20" id="pCm-Xi-zY9"/>
+                            <constraint firstItem="gRu-DN-6Vp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="reI-Cc-vJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Hw-H8-BCX" secondAttribute="trailing" id="t85-2I-w3v"/>
+                            <constraint firstItem="eet-VL-7Y7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vkM-vR-6zg"/>
+                            <constraint firstItem="3x3-jA-Kfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xMC-wc-mfX"/>
+                            <constraint firstItem="5hd-DP-qjk" firstAttribute="top" secondItem="eet-VL-7Y7" secondAttribute="bottom" constant="20" id="xbt-Wj-DkO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Label" destination="YL3-oF-gsO" id="AbF-X6-oUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,8 +125,20 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func randomDoupleTapped(_ sender: Any) {
+    @IBAction func randomDoubleTapped(_ sender: Any) {
         option = 1
         let number = Double.random(in: 1...1000)
         defaults.set(number, forKey: "value")
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     @IBAction func randomStringTapped(_ sender: Any) {
 
-        let word = ["Miguel", "William", "Ahmed", "Muhammad", "Dereje", "Frederic", "Jamal", "Morris", "Dameion"]
+        let word = ["Akali", "Wukong", "Zed", "Ezreal", "Qiyana", "Fiora", "Lucian", "Elise", "Akshan"]
         let randomElement = word.randomElement()!
         Label.text = randomElement
         defaults.set(randomElement, forKey: "value")
@@ -47,28 +47,32 @@ class ViewController: UIViewController {
 
         let array2 = [Int.random(in: 0...5),Int.random(in: 0...5) ]
         Label.text = ("\(array2)")
-        print(array2)
-        defaults.set(array2, forKey: "value")
-        let data2 = defaults.array(forKey: "value")
-        print(data2 ?? 0)
+        //print(array2)
+        defaults.set("\(array2)", forKey: "value")
+        
+        
+        //let data2 = defaults.array(forKey: "value")
+        //print(data2 ?? 0)
         
         
     }
     
     @IBAction func randomBookTapped(_ sender: Any) {
 
-        let page = BookOfLife(title: "IKaigi", authoName: "ABC", dayCount: 500)
-        let page2 = BookOfLife(title: "Sunrise", authoName: "BBB", dayCount: 100)
-        let page3 = BookOfLife(title: "Surprise", authoName: "NANA", dayCount: 1000)
+        let page = BookOfLife(title: "Bible", authoName: "JBC", dayCount: 500)
+        let page2 = BookOfLife(title: "MonkeyKing", authoName: "DLD", dayCount: 100)
+        let page3 = BookOfLife(title: "JourneyToTheWest", authoName: "SAD", dayCount: 1000)
 
         let choice = [page, page2, page3]
         let data = choice.randomElement()!
-        UserDefaults.standard.setObject(data, forKey: "value")
-        
-        if let myLife = UserDefaults.standard.getObject(forKey: data.title, castTo: BookOfLife.self) {
+        defaults.set("\(data)", forKey: "value")
+        Label.text =  "\(data)"
+        /*
+        if let myLife = defaults.getObject(forKey: "value", castTo: String.self) {
             print(myLife)
             Label.text = "\(myLife)"
         }
+         */
 
         
     }
