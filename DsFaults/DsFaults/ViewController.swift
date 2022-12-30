@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Label.text = defaults.string(forKey: "value")
+        Label?.text = defaults.string(forKey: "value")
                       
         
     }
